@@ -1,7 +1,7 @@
-## Character Extraction
+##Character Extraction
 Character extraction based on OpenCV and OCR
+
 No machine learning used for extraction here
-But machine learning will be used for char recognition
 
 Still in progress to be more readable
 
