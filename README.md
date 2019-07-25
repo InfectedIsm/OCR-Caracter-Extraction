@@ -24,8 +24,11 @@
 
 ###  In progress
 **3)** Train a CNN with computer font images
+
 **4)** CNN inference to recognize every char
+
 **5)** Generate document in txt format
+
 
 ### In the future
 **6)** Replace classical OCR character separation by ML based method
@@ -33,8 +36,11 @@
 
 
 ## 2) Instruction
-**Run** *char_extract.py* for char extraction from a document 
-**Run** *generate_dataset.py* for dataset generation
+**Run** *"char_extract.py"* for char extraction from a document
+
+**Extract** the archive named *"EnglishFnt.tgz"* in the *./dataset/* directory
+
+**Run** *"generate_dataset.py"* for dataset generation
 
 
 
