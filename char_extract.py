@@ -130,11 +130,7 @@ n_lines=0
 n_words=0
 n_char=0
 
-<<<<<<< HEAD
 img = cv2.imread("document_images/bigger_text.png")
-=======
-img = cv2.imread("bigger_text.png")
->>>>>>> d1c2e5fd4177428ef42bbb61e36f7ef37f589f03
 # convert image to grayscale in order to treat it easily
 # as color are not useful for text
 gray_img = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)

@@ -25,12 +25,14 @@
 ###  In progress
 **3)** Train a CNN with computer font images
 
+- For now, the model does not work at all. Only the basis are thrown, but neither the architecture, nor the hyper-parameters are set.
+
+
+### In the future
 **4)** CNN inference to recognize every char
 
 **5)** Generate document in txt format
 
-
-### In the future
 **6)** Replace classical OCR character separation by ML based method
 
 
@@ -40,7 +42,9 @@
 
 **Extract** the archive named *"EnglishFnt.tgz"* in the *./dataset/* directory
 
-**Run** *"generate_dataset.py"* for dataset generation
+**Run** *"manage_dataset.py"* for dataset generation
+
+**Play** with "neural_network.py"
 
 
 
