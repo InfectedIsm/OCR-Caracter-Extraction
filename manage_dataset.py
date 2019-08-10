@@ -15,6 +15,7 @@ __total_folders = len([name for name in os.listdir(__files_path) if os.path.isdi
 #Futures files paths
 __dataset_path = 'dataset/' + 'train_datas' + '.csv'
 __labels_path = 'dataset/' + 'labels' + '.csv'
+__table_path = 'dataset/' + 'table' + '.csv'
 
 #This function generate a randomly shuffled array of indexes with no repetition
 def GenerateRandomIndexes(size,max):
@@ -118,5 +119,8 @@ def CsvToArray(dataset_csv=__dataset_path, labels_csv=__labels_path, percentage=
 
     return data[0:int(np.shape(data)[0]*percentage)-1,:], labels[0:int(np.shape(labels)[0]*percentage)-1,:]
 
-CreateCsvFromImg()
-CreateDataset()
+def IndexToChar():
+    df = pd.read_csv(__table_path, header=None)
+    char_index = df.values
+
+    return char_index

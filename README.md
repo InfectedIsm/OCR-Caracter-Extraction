@@ -25,7 +25,7 @@
 ###  In progress
 **3)** Train a CNN with computer font images
 
-- For now, the model does not work at all. Only the basis are thrown, but neither the architecture, nor the hyper-parameters are set.
+- Not very effective for now (90%). Still need improvement (>98%)
 
 
 ### In the future
