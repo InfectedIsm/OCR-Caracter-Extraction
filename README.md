@@ -26,10 +26,16 @@
 **3)** Train a CNN with computer font images
 
 - Not very effective for now (90%). Still need improvement (>98%)
+- After studying the errors of the model, I found that errors was made due to several issues in the dataset :
+  - Lots of fonts have their lowercase letters that actually are the same as the uppercase ones
+  - O, o and 0 are the most common mistakes as sometimes they can't be diferenciated
+  - The other problem is that all the letters are rescaled to a common size. Then letters like W, w, V, v, U, u, ... can sometimes be misinterpreted
+- Then, 90% is not that bad in that case. But I will maybe have to clean the dataset and improve it regarding the 3 points above.
+
 
 
 ### In the future
-**4)** CNN inference to recognize every char
+**4)** CNN inference integrated in the whole program to recognize every char
 
 **5)** Generate document in txt format
 
