@@ -22,10 +22,10 @@
 - *table.csv* contains conversion table from labels to real character
 
 
-###  In progress
-**3)** Train a CNN with computer font images
 
-- Not very effective for now (90%). Still need improvement (>98%)
+**3)** Train a CNN with computer font images, save the model and use the saved model to recognize characters
+
+- Not very effective for now (90%). Still need improvements (>98%)
 - After studying the errors of the model, I found that errors was made due to several issues in the dataset :
   - Lots of fonts have their lowercase letters that actually are the same as the uppercase ones
   - O, o and 0 are the most common mistakes as sometimes they can't be diferenciated
