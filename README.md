@@ -2,6 +2,10 @@
 
 ## 1) Application description
 
+### Diagram  
+
+![block_diagram](/home/infected/Git/Characters-Extraction/block_diagram.png)
+
 ### What it does right now
 **1)** Character extraction from computer document based on OpenCV and classic OCR
 
