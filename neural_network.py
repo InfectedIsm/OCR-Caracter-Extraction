@@ -35,6 +35,11 @@ def UseModel(image, model=MODEL):
 
     return char_predicted
 
+def SaveCharToImg(img, path):
+    img = np.reshape(img, (28, 28)) * 255
+    img = cv2.resize(img, (280, 280))
+    path = str(path)
+    print(cv2.imwrite(path, img))
 
 def TestModelInteractive(test_datas, test_labels,
                          number_of_tests=5, infinite_loop=False, plot=True):
@@ -66,10 +71,8 @@ def TestModelInteractive(test_datas, test_labels,
             if (char_predicted != char_true_label):
                 n_errors = n_errors + 1
                 error_description = str(char_predicted + "-but-" + char_true_label)
-                img = np.reshape(img, (28, 28)) * 255
-                img = cv2.resize(img, (280, 280))
-                path=str('dataset/FailedChar/' + error_description + '_(' + str(i) + ').png')
-                print(cv2.imwrite(path,img))
+                path= str('dataset/FailedChar/' + error_description + '_(' + str(i) + ').png')
+                SaveCharToImg(img,path)
                 if error_description in error_list:
                     error_list[error_description] += 1
                 else:
@@ -197,11 +200,11 @@ def TrainModel(save=True):
     return 0
 
 
-_,_,x_test,y_test = GenerateTrainTestDatas()
-
-error_list= TestModelInteractive(x_test, y_test,
-                                number_of_tests=2000,
-                                infinite_loop=False,
-                                plot=False)
-
-print(error_list)
+# _,_,x_test,y_test = GenerateTrainTestDatas()
+#
+# error_list= TestModelInteractive(x_test, y_test,
+#                                 number_of_tests=2000,
+#                                 infinite_loop=False,
+#                                 plot=False)
+#
+# print(error_list)

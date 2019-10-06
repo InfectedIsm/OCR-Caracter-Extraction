@@ -36,14 +36,15 @@
   - The other problem is that all the letters are rescaled to a common size. Then letters like W, w, V, v, U, u, ... can sometimes be misinterpreted
 - Then, 90% is not that bad in that case. But I will maybe have to clean the dataset and improve it regarding the 3 points above.
 
-
-
-### In the future
-**4)** CNN inference integrated in the whole program to recognize every char
+**4)** Combine each modules to recognize every char
 
 **5)** Generate document in txt format
 
-**6)** Replace classical OCR character separation by ML based method
+### In the future
+
+**6)** Spelling verification to remove error due to wrong char recognition
+
+**7)** Replace classical OCR character separation by ML based method
 
 
 
@@ -54,8 +55,7 @@
 
 **Run** *"manage_dataset.py"* for dataset generation
 
-**Play** with "neural_network.py"
-
+**Play** with "main.py"
 
 
 ## 3) Problems
@@ -63,7 +63,7 @@
 Not effective with all writing policies.
 To many problems, but I wanted to try.
 
-Regarding bullet (6) :
+Regarding bullet (7) :
 
 Way better to go for a ML method in order to extract characters in an image. 
 A good method would be for example to move a frame around the image. 
