@@ -4,7 +4,7 @@
 
 ### Diagram  
 
-![block_diagram](/home/infected/Git/Characters-Extraction/block_diagram.png)
+<img src="./block_diagram.png" alt="block diagram" width="400">
 
 ### What it does right now
 **1)** Character extraction from computer document based on OpenCV and classic OCR
