@@ -267,13 +267,6 @@ def TrainModel(save=True):
 
 #=========================================
 
-# TrainModel()
-
-_, _, x_test, y_test = GenerateTrainTestDatas()
-
-error_list= TestModelInteractive(x_test, y_test,
-                                number_of_tests=2000,
-                                infinite_loop=False,
-                                trace_char=False)
+# _,_,x_test,y_test = GenerateTrainTestDatas()
 #
 # print(error_list)
