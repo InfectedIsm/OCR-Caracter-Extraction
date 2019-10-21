@@ -187,8 +187,8 @@ def GenerateTrainTestDatas(train_percentage = 0.95):
 
     x_test = np.array(x[test_indexes, :])
     x_test = np.reshape(x_test, (np.shape(x_test)[0], 28, 28, 1))
-    y_test = np.array(y[test_indexes, :]) - 1
 
+    y_test = np.array(y[test_indexes, :]) - 1
     y_test = utils.to_categorical(y_test, num_classes=62)
 
     return x_train, y_train, x_test, y_test
@@ -201,7 +201,7 @@ def TrainModel(save=True):
     :return: nothing
     """
 
-    x_train, x_test, y_train, y_test = GenerateTrainTestDatas()
+    x_train, y_train, x_test, y_test = GenerateTrainTestDatas()
 
     model = Sequential()
     # input: 28x28 images with 1 channels (no colors) -> (100, 100, 1) tensors.
@@ -267,11 +267,13 @@ def TrainModel(save=True):
 
 #=========================================
 
-_,_,x_test,y_test = GenerateTrainTestDatas()
-#
-# error_list= TestModelInteractive(x_test, y_test,
-#                                 number_of_tests=2000,
-#                                 infinite_loop=False,
-#                                 plot=False)
+# TrainModel()
+
+_, _, x_test, y_test = GenerateTrainTestDatas()
+
+error_list= TestModelInteractive(x_test, y_test,
+                                number_of_tests=2000,
+                                infinite_loop=False,
+                                trace_char=False)
 #
 # print(error_list)
