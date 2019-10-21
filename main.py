@@ -1,13 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jul  5 22:13:41 2019
+
+@author: infected
+"""
+
 import cv2
 
-from neural_network import UseModel, SaveCharToImg
+from neural_network import UseModel
 from char_extract import *
-
-def SaveCharToImg(img, path):
-    img = cv2.resize(img, (280, 280))
-    path = str(path)
-    cv2.imwrite(path, img)
-
 
 document = {}
 n_lines=0
@@ -38,7 +39,8 @@ for line_idx,line_img in enumerate(extracted_line):
             # print(np.shape(char_img))
             char_img = cv2.resize(char_img,(28, 28))
             document[line_idx][word_idx][char_idx] = char_img
-            SaveCharToImg(char_img, path)
+            SaveCharToPNG(char_img, path)
+
             # print(np.shape(char_img))
 
 # print(document)
@@ -52,7 +54,10 @@ with open("result/text.txt","w") as f :
     for line_number, line in document.items():
         for word_number, word in line.items():
             word_buffer = ""
-            for k,v in word.items():
-                word_buffer = word_buffer + UseModel(v)
+            for char_number, char in word.items():
+                word_buffer = word_buffer + UseModel(char)
             print(word_buffer, end=' ', file=f)
+            # print(word_buffer)
         print(file=f)
+        # print()
+
